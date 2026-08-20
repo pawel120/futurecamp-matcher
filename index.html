@@ -7,11 +7,11 @@
 <title>PARP Future Camp matcher</title>
 <style>
   :root{
-    --bg:#fff5f5; --card:#fff; --ink:#1a0a0a; --muted:#8a6a6a; --line:#f3d5d5;
-    --accent:#db1a1a; --accent-soft:#fdeaea;
-    --get:#db1a1a; --get-soft:#fdeaea;
-    --give:#b0121b; --give-soft:#fbe4e4;
-    --both:#7a0e14; --both-soft:#f7dede;
+    --bg:#fff; --card:#fff; --ink:#1a1a1a; --muted:#767676; --line:#e8e8e8;
+    --accent:#c11f2c; --accent-soft:#fbe9ea;
+    --get:#c11f2c; --get-soft:#fbe9ea;
+    --give:#8f1620; --give-soft:#f7e1e2;
+    --both:#5c0e15; --both-soft:#f2d9db;
     --r:14px;
   }
   *{box-sizing:border-box; -webkit-tap-highlight-color:transparent}
@@ -224,7 +224,7 @@ async function search(more){
   const oldMoreBtn = $('moreBtn');
   if(oldMoreBtn){ oldMoreBtn.disabled = true; oldMoreBtn.textContent = 'Szukam…'; }
   let spin = null;
-  if(!more){ $('note').textContent = ''; spin = loading(); window.scrollTo({ top: 260, behavior:'smooth' }); }
+  if(!more){ $('note').textContent = ''; document.querySelector('.self').classList.add('hide'); spin = loading(); window.scrollTo({ top: 260, behavior:'smooth' }); }
 
   try{
     const r = await fetch('/api/match', {
