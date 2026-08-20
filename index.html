@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Z kim gadać na Future Camp</title>
+<title>PARP Future Camp matcher</title>
 <style>
   :root{
     --bg:#f6f7f9; --card:#fff; --ink:#0f1115; --muted:#6b7280; --line:#e5e7eb;
@@ -90,12 +90,12 @@
 <body>
 <div class="wrap">
 
-  <h1>Z kim gadać na Future Camp</h1>
-  <p class="sub">Napisz, czego szukasz. Dostaniesz ludzi, do których warto podejść — i o co ich zapytać.</p>
+  <h1>PARP Future Camp matcher</h1>
+  <p class="sub">Napisz czego szukasz, kogo potrzebujesz lub z kim chciałbyś się połączyć.</p>
 
-  <textarea id="q" placeholder="np. mam produkt, zero sprzedaży, szukam kogoś kto pomoże wejść do dużych firm"
+  <textarea id="q" placeholder=""
             maxlength="500" enterkeyhint="search"></textarea>
-  <button class="go" id="go">Znajdź ludzi</button>
+  <button class="go" id="go">Szukaj</button>
 
   <div class="chips" id="chips"></div>
   <div class="note" id="note"></div>
@@ -103,7 +103,7 @@
   <div id="out"></div>
 
   <footer>
-    Nieoficjalne narzędzie zrobione przez uczestnika. Dane: intro z grupy i publiczna agenda PARP.<br>
+    Dane: intro z grupy i publiczna agenda PARP.<br>
     Chcesz się dopisać albo zniknąć z listy? <a href="mailto:paweljuzekk@gmail.com?subject=Future%20Camp">Napisz do mnie</a>.
   </footer>
 </div>
@@ -121,14 +121,7 @@ function sub(p){
 const DIR = { get:'↓ Pomoże Tobie', give:'↑ Ty pomożesz jemu', both:'↔ Wspólny temat' };
 
 const CHIPS = [
-  'szukam inwestora na pierwszą rundę',
-  'mam produkt, nie umiem go sprzedać',
-  'potrzebuję pomocy przy pitch decku',
-  'szukam technicznego wspólnika',
-  'chcę wdrażać AI u klientów',
-  'dotacje i pieniądze publiczne',
-  'jak wejść do dużych firm',
-  'marketing przy zerowym budżecie',
+
 ];
 $('chips').innerHTML = CHIPS.map(c => `<button class="chip">${esc(c)}</button>`).join('');
 
