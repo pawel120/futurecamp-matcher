@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Z kim gadać na Future Camp</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#fff; --ink:#0f1115; --muted:#6b7280; --line:#e5e7eb;
+    --accent:#1a56db; --accent-soft:#eef2ff;
+    --get:#047857; --get-soft:#ecfdf5;
+    --give:#b45309; --give-soft:#fffbeb;
+    --both:#6d28d9; --both-soft:#f5f3ff;
+    --r:14px;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent}
+  html,body{margin:0}
+  body{background:var(--bg); color:var(--ink); padding:0 0 72px;
+    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif}
+  .wrap{max-width:720px; margin:0 auto; padding:0 16px}
+  h1{font-size:26px; line-height:1.2; margin:28px 0 8px; letter-spacing:-.02em}
+  .sub{color:var(--muted); font-size:15px; margin:0 0 20px}
+  .hide{display:none !important}
+
+  textarea{width:100%; font:inherit; color:var(--ink); background:var(--card);
+    border:1.5px solid var(--line); border-radius:var(--r); padding:15px 16px;
+    outline:none; -webkit-appearance:none; min-height:104px; resize:vertical; line-height:1.5}
+  textarea:focus{border-color:var(--accent); box-shadow:0 0 0 3px rgba(26,86,219,.12)}
+
+  .go{width:100%; margin-top:10px; padding:14px; font:inherit; font-size:16px; font-weight:650;
+    color:#fff; background:var(--accent); border:0; border-radius:var(--r); cursor:pointer}
+  .go:disabled{opacity:.55; cursor:default}
+
+  .chips{display:flex; gap:8px; overflow-x:auto; padding:14px 0 2px; scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:0 0 auto; padding:7px 13px; font:inherit; font-size:13.5px; white-space:nowrap;
+    cursor:pointer; background:var(--card); border:1px solid var(--line);
+    border-radius:999px; color:var(--muted)}
+  .chip:hover{border-color:var(--accent); color:var(--accent)}
+
+  .note{font-size:13px; color:var(--muted); padding:14px 2px 4px}
+
+  .load{text-align:center; padding:52px 16px; color:var(--muted)}
+  .dots{display:inline-flex; gap:5px; margin-bottom:14px}
+  .dots i{width:7px; height:7px; border-radius:50%; background:var(--accent); opacity:.3;
+    animation:b 1.2s infinite}
+  .dots i:nth-child(2){animation-delay:.2s} .dots i:nth-child(3){animation-delay:.4s}
+  @keyframes b{0%,60%,100%{opacity:.25; transform:translateY(0)}30%{opacity:1; transform:translateY(-4px)}}
+
+  .card{position:relative; background:var(--card); border:1px solid var(--line);
+    border-radius:var(--r); padding:16px; margin-bottom:12px}
+  .rank{position:absolute; top:15px; right:16px; font-size:12px; font-weight:700; color:#c9cdd3}
+  .top{display:flex; gap:12px; padding-right:26px}
+  .av{flex:0 0 auto; width:42px; height:42px; border-radius:50%; background:var(--accent-soft);
+    color:var(--accent); display:flex; align-items:center; justify-content:center;
+    font-weight:700; font-size:14px}
+  .nm{font-weight:650; font-size:17.5px; letter-spacing:-.01em}
+  .hl{color:var(--muted); font-size:14px; margin-top:2px}
+
+  .badges{display:flex; flex-wrap:wrap; gap:6px; margin-top:12px}
+  .dir{font-size:12px; font-weight:650; padding:4px 9px; border-radius:7px}
+  .dir.get{background:var(--get-soft); color:var(--get)}
+  .dir.give{background:var(--give-soft); color:var(--give)}
+  .dir.both{background:var(--both-soft); color:var(--both)}
+  .kind{font-size:12px; font-weight:600; padding:4px 9px; border-radius:7px;
+    background:var(--bg); color:var(--muted); border:1px solid var(--line)}
+
+  .why{margin-top:11px; font-size:15px}
+  .ask{margin-top:11px; font-size:14.5px; background:var(--bg); border-left:3px solid var(--accent);
+    border-radius:0 8px 8px 0; padding:10px 12px}
+  .ask b{display:block; font-size:11px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:2px}
+  .when{margin-top:10px; font-size:13px; color:var(--muted)}
+
+  .acts{display:flex; gap:8px; margin-top:14px; flex-wrap:wrap}
+  .btn{flex:1 1 auto; min-width:130px; text-align:center; text-decoration:none; cursor:pointer;
+    font:inherit; font-size:14px; font-weight:600; padding:11px 12px; border-radius:10px;
+    border:1px solid var(--line); background:var(--card); color:var(--ink)}
+  .btn.primary{background:var(--accent); border-color:var(--accent); color:#fff}
+  .btn:active{transform:translateY(1px)}
+
+  .err{background:#fef2f2; border:1px solid #fecaca; color:#b91c1c; padding:14px;
+    border-radius:var(--r); font-size:14.5px}
+  .empty{text-align:center; color:var(--muted); padding:44px 16px; font-size:15px}
+  footer{color:var(--muted); font-size:12px; text-align:center; padding:30px 16px; line-height:1.7}
+  footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Z kim gadać na Future Camp</h1>
+  <p class="sub">Napisz, czego szukasz. Dostaniesz ludzi, do których warto podejść — i o co ich zapytać.</p>
+
+  <textarea id="q" placeholder="np. mam produkt, zero sprzedaży, szukam kogoś kto pomoże wejść do dużych firm"
+            maxlength="500" enterkeyhint="search"></textarea>
+  <button class="go" id="go">Znajdź ludzi</button>
+
+  <div class="chips" id="chips"></div>
+  <div class="note" id="note"></div>
+
+  <div id="out"></div>
+
+  <footer>
+    Nieoficjalne narzędzie zrobione przez uczestnika. Dane: intro z grupy i publiczna agenda PARP.<br>
+    Chcesz się dopisać albo zniknąć z listy? <a href="mailto:TWOJ@MAIL.PL?subject=Future%20Camp">Napisz do mnie</a>.
+  </footer>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => (s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const initials = n => n.split(/\s+/).slice(0,2).map(w=>w[0]).join('').toUpperCase();
+function sub(p){
+  const h = p.headline || '', c = p.company || '';
+  if(!c) return h;
+  if(!h) return c;
+  return h.toLowerCase().includes(c.toLowerCase()) ? h : c + ' — ' + h;
+}
+const DIR = { get:'↓ Pomoże Tobie', give:'↑ Ty pomożesz jemu', both:'↔ Wspólny temat' };
+
+const CHIPS = [
+  'szukam inwestora na pierwszą rundę',
+  'mam produkt, nie umiem go sprzedać',
+  'potrzebuję pomocy przy pitch decku',
+  'szukam technicznego wspólnika',
+  'chcę wdrażać AI u klientów',
+  'dotacje i pieniądze publiczne',
+  'jak wejść do dużych firm',
+  'marketing przy zerowym budżecie',
+];
+$('chips').innerHTML = CHIPS.map(c => `<button class="chip">${esc(c)}</button>`).join('');
+
+let busy = false;
+
+const STEPS = ['Czytam Twoje zapytanie…','Przeglądam 113 osób…','Szukam komplementarnych dopasowań…','Układam uzasadnienia…'];
+function loading(){
+  $('out').innerHTML = `<div class="load"><div class="dots"><i></i><i></i><i></i></div><div id="st">${STEPS[0]}</div></div>`;
+  let i = 0;
+  return setInterval(() => { const el = $('st'); if(el) el.textContent = STEPS[++i % STEPS.length]; }, 1900);
+}
+
+function card(p, i){
+  const link = p.linkedin || p.url;
+  return `<div class="card">
+    <div class="rank">#${i+1}</div>
+    <div class="top">
+      <div class="av">${initials(p.name)}</div>
+      <div style="min-width:0">
+        <div class="nm">${esc(p.name)}</div>
+        <div class="hl">${esc(sub(p))}</div>
+      </div>
+    </div>
+    <div class="badges">
+      <span class="dir ${p.fit}">${DIR[p.fit] || DIR.get}</span>
+      <span class="kind">${p.kind === 'prelegent' ? 'prelegent / jury' : 'uczestnik'}</span>
+    </div>
+    <div class="why">${esc(p.why)}</div>
+    ${p.ask ? `<div class="ask"><b>Zapytaj o</b>${esc(p.ask)}</div>` : ''}
+    ${p.session ? `<div class="when">${esc(p.session)}${p.when ? ' · ' + esc(p.when) : ''}</div>` : ''}
+    <div class="acts">
+      ${link ? `<a class="btn primary" href="${esc(link)}" target="_blank" rel="noopener">${p.linkedin ? 'LinkedIn →' : p.kind === 'prelegent' ? 'Profil PARP →' : 'Strona →'}</a>` : ''}
+      <button class="btn" data-copy="${esc(p.ask || p.why)}">Kopiuj pytanie</button>
+    </div>
+  </div>`;
+}
+
+async function search(){
+  const q = $('q').value.trim();
+  if(q.length < 3 || busy) return;
+  busy = true; $('go').disabled = true; $('note').textContent = '';
+  const spin = loading();
+  window.scrollTo({ top: 260, behavior:'smooth' });
+
+  try{
+    const r = await fetch('/api/match', {
+      method:'POST', headers:{'content-type':'application/json'},
+      body: JSON.stringify({ q })
+    });
+    const d = await r.json();
+    clearInterval(spin);
+
+    if(!r.ok){
+      const diag = d.diagnostyka ? `<pre style="margin:10px 0 0; white-space:pre-wrap; font-size:12px; opacity:.85">${esc(JSON.stringify(d.diagnostyka, null, 2))}</pre>` : '';
+      $('out').innerHTML = `<div class="err">${esc(d.error || 'Coś poszło nie tak.')}${diag}</div>`; return;
+    }
+
+    const res = d.results || [];
+    $('note').textContent = res.length
+      ? `${res.length} ${res.length===1?'osoba':res.length<5?'osoby':'osób'} z ${d.total} w bazie`
+      : '';
+    $('out').innerHTML = res.length
+      ? res.map(card).join('')
+      : `<div class="empty">Nikt sensownie nie pasuje do tego zapytania.<br>Spróbuj opisać to inaczej albo szerzej.</div>`;
+  }catch(e){
+    clearInterval(spin);
+    $('out').innerHTML = `<div class="err">Brak połączenia. Sprawdź internet i spróbuj ponownie.</div>`;
+  }finally{
+    busy = false; $('go').disabled = false;
+  }
+}
+
+$('go').addEventListener('click', search);
+$('q').addEventListener('keydown', e => {
+  if((e.metaKey || e.ctrlKey) && e.key === 'Enter') search();
+});
+document.addEventListener('click', e => {
+  const chip = e.target.closest('.chip');
+  if(chip){ $('q').value = chip.textContent; search(); return; }
+  const c = e.target.closest('[data-copy]');
+  if(c) navigator.clipboard.writeText(c.dataset.copy).then(() => {
+    const o = c.textContent; c.textContent = 'Skopiowane ✓';
+    setTimeout(() => c.textContent = o, 1500);
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+/* PRELEGENCI, MENTORZY I JURY — PARP Future Camp 2026, Ryn (24-25.08)
+   Źródło: publiczna agenda + biogramy z parp.gov.pl
+   offers = w czym realnie pomoże, wyprowadzone z biogramu (nie ze stanowiska) */
+
+window.SPEAKERS = [
+
+/* ================= INWESTORZY, KAPITAŁ, JURY ================= */
+{ id:"jacek-murawski", url:"https://www.parp.gov.pl/component/publications/author/murawski-jacek", name:"Jacek Murawski", role:"Prezes Zarządu i Managing Partner", company:"ORLEN VC",
+  bio:"30+ lat w budowaniu wartości przedsiębiorstw, nadzorze korporacyjnym i rozwoju innowacji. Wcześniej General Partner i Prezes Invento VC, Wiceprezes i CFO PGNiG, Członek Zarządu i CFO PTK Centertel.",
+  offers:["corporate VC","finanse korporacyjne","zarządzanie strategiczne","wejście do dużej grupy kapitałowej","energetyka i przemysł"],
+  tags:["inwestor","vc","jury","energia","finanse"],
+  session:"Jury PARP Future Challenge", when:"24.08, bloki 14:30 / 16:10 / 17:30" },
+
+{ id:"aleksandra-pedraszewska", url:"https://www.parp.gov.pl/component/publications/author/pedraszewska-aleksandra", name:"Aleksandra Pędraszewska", role:"Partner", company:"vastpoint",
+  bio:"Finansuje firmy na etapie zalążkowym. Rada Startup Poland i Rada Przyszłości przy Premierze RP. Wcześniej ElevenLabs — bezpieczeństwo AI i partnerstwa strategiczne. Współzałożycielka i COO deep-tech startupu, pozyskała 25 mln USD. Absolwentka Cambridge.",
+  offers:["inwestycje seed","deep-tech","bezpieczeństwo AI","partnerstwa strategiczne","pozyskanie dużej rundy","polityka publiczna dla startupów"],
+  tags:["inwestor","vc","deeptech","ai","zagranica"],
+  session:"Keynote + moderacja panelu „Poland-maxxing”", when:"24.08 11:05" },
+
+{ id:"lech-kaniuk", url:"https://www.parp.gov.pl/component/publications/author/kaniuk-lech", name:"Lech Kaniuk", role:"Venture Partner Eleven Ventures; założyciel SunRoof, PizzaPortal, iTaxi", company:"Faraday X / Grasperly",
+  bio:"Seryjny przedsiębiorca i inwestor. 10+ firm, 150 mln euro pozyskanego kapitału, kilka exitów. Współtwórca PizzaPortal.pl (exit do Delivery Hero), były CEO SunRoof, wczesny anioł i CEO iTaxi. Buduje Faraday X (Energy-as-a-Service) i Grasperly (AI, stealth). Wykładowca MBA na SGH i Koźmińskim. Builder of the Year w Szwecji.",
+  offers:["budowanie firm od zera","pozyskiwanie dużego kapitału","exity","marketplace i consumer tech","energetyka","anioł biznesu"],
+  tags:["inwestor","aniol","founder","marketplace","exit"],
+  session:"Speak „Najlepszy moment na startup to gdy boisz się zacząć”", when:"25.08 11:40" },
+
+{ id:"wojciech-kulikowski", url:"https://www.parp.gov.pl/component/publications/author/kulikowski-wojciech", name:"Wojtek Kulikowski", role:"Founder Boski AI; venture scout a16z", company:"Boski AI",
+  bio:"Programista i seryjny przedsiębiorca, założyciel asystenta AI Boski, venture scout dla funduszu a16z. Wcześniej stworzył aplikację Supercast, sprzedaną do Farcaster. Inwestuje w AI, fintech, consumer, robotykę i obronność.",
+  offers:["dojście do a16z","budowa produktu AI","exit aplikacji","inwestycje w AI, fintech, robotykę i obronność"],
+  tags:["inwestor","ai","founder","zagranica","exit"],
+  session:"Panel „Poland-maxxing”", when:"24.08 11:20" },
+
+{ id:"radek-dembkowski", url:"https://www.parp.gov.pl/component/publications/author/dembkowski-radek", name:"Radek Dembkowski", role:"Twórca Attribute.VC, CEO RadCode, CTO Wellbee, anioł", company:"RadCode / Wellbee",
+  bio:"Inżynier oprogramowania, seryjny przedsiębiorca i inwestor technologiczny w AI, startupach i VC. Doświadczenie z NVIDIA, Sumo Logic i Yelp. VP of Engineering w spółce Y Combinator. Wspiera startupy AI-first i B2B.",
+  offers:["anioł biznesu","budowa zespołu inżynierskiego","AI-first i B2B","doświadczenie z Doliny Krzemowej i YC","healthtech"],
+  tags:["inwestor","aniol","ai","healthtech","software"],
+  session:"Panel „Poland-maxxing”", when:"24.08 11:20" },
+
+{ id:"adam-bartkiewicz", url:"https://www.parp.gov.pl/component/publications/author/bartkiewicz-adam", name:"Adam Bartkiewicz", role:"Partner", company:"Digital Ocean Ventures",
+  bio:"Partner w polskim funduszu VC inwestującym w pre-seed i seed. Produktowiec — przez lata pomagał zespołom odkrywać, co naprawdę warto zbudować.",
+  offers:["inwestycje pre-seed i seed","product discovery","weryfikacja co warto budować"],
+  tags:["inwestor","vc","jury","produkt"],
+  session:"Jury PARP Future Challenge", when:"24.08" },
+
+{ id:"sylwia-duszynska", url:"https://www.parp.gov.pl/component/publications/author/duszynska-sylwia", name:"Sylwia Duszyńska", role:"PR Officer", company:"Tar Heel Capital Pathfinder",
+  bio:"PR Officer w funduszu VC inwestującym w pre-seed i seed. Odpowiada za komunikację funduszu i wspiera startupy z portfela. Organizatorka konferencji Founders Connect. Współzałożycielka startupu FriendZone.",
+  offers:["PR dla startupu","dotarcie do funduszu VC","komunikacja przy rundzie","społeczność Founders Connect"],
+  tags:["inwestor","vc","jury","pr"],
+  session:"Jury PARP Future Challenge", when:"24.08" },
+
+{ id:"marcin-lenkiewicz", url:"https://www.parp.gov.pl/component/publications/author/lenkiewicz-marcin", name:"Marcin Lenkiewicz", role:"Co-Founder & Vice President", company:"Qpony-Blix (Grupa BLIX)",
+  bio:"Współzałożyciel i wiceprezes Grupy BLIX. Komercjalizacja technologii w mobile, drive-to-store i FMCG. Forbes 30 under 30, Deloitte Technology Fast 50 CE, Financial Times 1000. Program Ready to Go w Dolinie Krzemowej.",
+  offers:["sprzedaż zamiast szukania inwestora","komercjalizacja technologii","retail i FMCG","mobile i drive-to-store","15 lat budowania biznesu"],
+  tags:["inwestor","jury","sprzedaz","ecommerce","retail"],
+  session:"Speak „Nie szukaj inwestora. Znajdź klienta.”", when:"25.08 11:00" },
+
+{ id:"natalia-swirska", url:"https://www.parp.gov.pl/component/publications/author/swirska-natalia", name:"Natalia Świrska", role:"Startup Program Lead CEE", company:"OVHcloud",
+  bio:"Przedsiębiorczyni i mentorka. Założycielka startupu AI w branży nieruchomości. Bizneswoman Roku, Forbes 30 Under 30, Strong Women in IT.",
+  offers:["program startupowy OVHcloud","kredyty i infrastruktura chmurowa","AI w nieruchomościach","mentoring"],
+  tags:["inwestor","jury","cloud","proptech","program"],
+  session:"Jury + debata „Czy uczelnia jest jeszcze potrzebna?”", when:"24.08 15:30" },
+
+{ id:"konrad-ozdowy", url:"https://www.parp.gov.pl/component/publications/author/ozdowy-konrad", name:"Konrad Ozdowy", role:"Manager Innowacji, program Let's Fintech", company:"PKO Bank Polski",
+  bio:"Prowadzi program Let's Fintech w PKO BP. Wieloletnie doświadczenie w budowaniu i wspieraniu firm technologicznych. Wcześniej startupowiec, dziś wspiera młodych przedsiębiorców w skalowaniu.",
+  offers:["wdrożenie w największym polskim banku","program Let's Fintech","fintech","pilotaż w dużej instytucji","skalowanie"],
+  tags:["korporacja","fintech","jury","enterprise","program"],
+  session:"Jury + panel „Jak budować globalną markę”", when:"24.08, panel 16:50" },
+
+{ id:"maciej-majewski", url:"https://www.parp.gov.pl/component/publications/author/majewski-maciej", name:"Maciej Majewski", role:"Założyciel Pitch Me Baby; CEO i Head of Acceleration", company:"Accelpoint",
+  bio:"Założyciel Pitch Me Baby — globalnych wydarzeń networkingowych transformujących umiejętności pitchingowe founderów. W Accelpoint buduje akcelerator dla fintech, insurtech, telco i cleantech w CEE. Współzałożyciel i wiceprzewodniczący Sekcji TECHPL. Zna współpracę startup-klient ze wszystkich stron: jako founder, jako korporacja wdrażająca startupy i jako akcelerator — mentor kilkuset zespołów.",
+  offers:["pitch i prezentacja przed inwestorem","akceleracja","fintech, insurtech, telco, cleantech","wdrożenia startup-korporacja","mentoring"],
+  tags:["akceleracja","pitch","jury","mentoring","fintech"],
+  session:"Jury PARP Future Challenge", when:"24.08" },
+
+{ id:"albert-tomaszewski", name:"Albert Tomaszewski", role:"Adiunkt", company:"SGH Warsaw School of Economics",
+  bio:"", offers:["strategia","perspektywa akademicka","badania rynku"],
+  tags:["nauka","jury","strategia"],
+  session:"Jury PARP Future Challenge", when:"24.08" },
+
+{ id:"karolina-kazimierczak", name:"Karolina Kazimierczak", role:"Zastępca Dyrektora Centrum Rozwoju Startupów", company:"PARP",
+  bio:"", offers:["programy PARP dla startupów","finansowanie publiczne","dostęp do ekosystemu PARP"],
+  tags:["parp","dotacje","jury","program"],
+  session:"Jury PARP Future Challenge", when:"24.08" },
+
+/* ================= DOTACJE I KAPITAŁ PUBLICZNY ================= */
+{ id:"michal-misztal", url:"https://www.parp.gov.pl/component/publications/author/misztal-michal", name:"Michał Misztal", role:"CEO Startup Academy Poland, członek zarządu TechPL", company:"Startup Academy",
+  bio:"Trener biznesu, twórca programów nauczania przedsiębiorczości, ekspert PARP w ocenie innowacyjności startupów. Tysiące godzin doradczych. Pracował przy procesach inwestycyjnych. Przez 11 lat w Fundacji AIP — opiekował się ponad 600 startupami, Dyrektor Regionalny AIP, współtworzył fundusz AIP Seed Capital.",
+  offers:["pozyskiwanie kapitału publicznego","dotacje","ocena innowacyjności","doradztwo dla wczesnej fazy","radzenie sobie z emocjami w biznesie"],
+  tags:["dotacje","finansowanie","warsztat","mentoring"],
+  session:"Warsztat „Jak skutecznie pozyskiwać kapitał publiczny?” (2,5h) + speak o emocjach", when:"24.08 11:00, 25.08 13:40" },
+
+{ id:"lukasz-sztern", url:"https://www.parp.gov.pl/component/publications/author/sztern-lukasz", name:"Łukasz Sztern", role:"Menedżer programów innowacji i przedsiębiorczości technologicznej", company:"Polski Fundusz Rozwoju",
+  bio:"W PFR rozwija inicjatywy wspierające spółki deeptech i komercjalizację technologii. W latach 2016-2026 w Inkubatorze Innowacyjności Politechniki Warszawskiej — wsparł ponad 200 projektów i startupów technologicznych.",
+  offers:["programy PFR","deeptech","komercjalizacja technologii","finansowanie publiczne dla wczesnej fazy"],
+  tags:["dotacje","pfr","deeptech","finansowanie"],
+  session:"Warsztat „Masz pomysł. I co dalej?”", when:"24.08 13:50" },
+
+{ id:"aleksandra-wirth", url:"https://www.parp.gov.pl/component/publications/author/wirth-aleksandra", name:"Aleksandra Wirth", role:"Starsza specjalistka, Departament Rozwoju Innowacji", company:"Polski Fundusz Rozwoju",
+  bio:"Odpowiada za program VC Connect, łączący startupy z biznesem i funduszami VC. Fokus: zrównoważone technologie i odporność miast. Doświadczenie w korporacjach i startupach.",
+  offers:["program VC Connect","łączenie startupu z funduszami","zrównoważone technologie","smart city"],
+  tags:["dotacje","pfr","vc","cleantech"],
+  session:"Warsztat „Masz pomysł. I co dalej?”", when:"24.08 13:50" },
+
+{ id:"maciej-polak", url:"https://www.parp.gov.pl/component/publications/author/polak-maciej", name:"Maciej Polak", role:"Communications Manager", company:"PFR Ventures",
+  bio:"Komunikacja PFR Ventures — największego inwestora instytucjonalnego w Polsce, finansującego fundusze VC i PE. Tworzy analizy rynku VC: przeglądy mediów, newslettery, kwartalne raporty o polskim ekosystemie. Wcześniej agencje PR dla finansów, technologii i zbrojeniówki.",
+  offers:["mapa polskiego rynku VC","dane o funduszach","PR w branży finansowej i zbrojeniowej","dotarcie do funduszy z portfela PFR"],
+  tags:["vc","pfr","dane","pr"],
+  session:"Warsztat „Masz pomysł. I co dalej?”", when:"24.08 13:50" },
+
+{ id:"magdalena-jablonska", url:"https://www.parp.gov.pl/component/publications/author/jablonska-magdalena", name:"Magdalena Jabłońska", role:"Prezeska Fundacji Przedsiębiorczości Technologicznej, Zarząd TechPL", company:"FPT",
+  bio:"21+ lat jako doradca biznesowy i menedżer we wspieraniu innowacji, projektów B+R i przedsiębiorczości technologicznej. Kariera w Deloitte i PwC. Od 2016 kieruje FPT, realizując programy StartSmart CEE i ESA BIC Poland. 11+ lat rozwija ekosystem startupów w CEE.",
+  offers:["programy StartSmart CEE i ESA BIC","projekty B+R","space tech","doradztwo w skalowaniu","ekosystem CEE"],
+  tags:["deeptech","program","dotacje","space"],
+  session:"Debata „Czy uczelnia jest jeszcze potrzebna?”", when:"24.08 15:30" },
+
+{ id:"maciek-sadowski", url:"https://www.parp.gov.pl/component/publications/author/sadowski-maciej", name:"Maciek Sadowski", role:"Współzałożyciel", company:"Startup Hub Poland",
+  bio:"Współzałożyciel akceleratora technologicznego w CEE (CEO 2012-2022). Inwestor i analityk w funduszach VC (Giza Polish Ventures, StartVenture@Poland, StarFinder VC) — około 60 procesów inwestycyjnych. 24 z 29 jego inwestycji w hard-tech pozyskało kolejne finansowanie. Przewodniczący Komitetu Nowych Technologii KIG 2018-2025, Narodowa Rada Rozwoju.",
+  offers:["akceleracja międzynarodowa","hard-tech i deeptech","proces inwestycyjny od strony funduszu","dostanie się do topowych programów"],
+  tags:["akceleracja","deeptech","vc","zagranica"],
+  session:"Speak „Akceleracyjna liga mistrzów nie dla Polaków?”", when:"24.08 16:20" },
+
+{ id:"grzegorz-maciaszek", url:"https://www.parp.gov.pl/component/publications/author/maciaszek-grzegorz", name:"Grzegorz Maciaszek", role:"Mentor startupów Industry Lab; Menedżer Inwestycyjny Space Bridge Fund", company:"DGA S.A.",
+  bio:"20+ lat na stanowiskach kierowniczych w firmach polskich i międzynarodowych. Menedżer Inwestycyjny w funduszu VC Space Bridge Fund. Autor podręcznika metodyki La Salle Matrix Thinking. Prowadzi warsztaty z innowacji, pozyskiwania kapitału, przygotowania PITCH DECKA, Design Thinking, Business Model Canvas, Lean Startup i SCRUM.",
+  offers:["przygotowanie pitch decka","pozyskiwanie kapitału","lean startup i walidacja","Business Model Canvas","mentoring akceleracyjny","space tech"],
+  tags:["pitch","lean","mentoring","vc","warsztat"],
+  session:"Warsztat „Lean Startup Experiment. Minimalizowanie ryzyka rynkowego”", when:"25.08 13:00" },
+
+/* ================= GTM, SPRZEDAŻ, ENTERPRISE ================= */
+{ id:"margaret-sikora", url:"https://www.parp.gov.pl/component/publications/author/sikora-margaret", name:"Margaret Sikora", role:"CEO", company:"Woodpecker",
+  bio:"Zaczynała w Woodpeckerze jako Junior Supporter, dziś CEO. 10+ lat w B2B SaaS — produkt, sprzedaż, operacje, customer success, skalowanie. Doktorat z prawa, specjalizacja w ochronie danych osobowych w SaaS. Buduje narzędzia do automatyzacji sprzedaży łączące outbound email i LinkedIn.",
+  offers:["outbound i cold mail","system GTM","B2B SaaS","automatyzacja sprzedaży","RODO w SaaS","skalowanie firmy"],
+  tags:["gtm","sprzedaz","saas","outbound","b2b"],
+  session:"Speak „TOP 5 błędów w outboundzie. GTM system, który działa”", when:"24.08 12:25" },
+
+{ id:"jagna-pomorska", url:"https://www.parp.gov.pl/component/publications/author/pomorska-jagna", name:"Jagna Pomorska", role:"Współzałożycielka", company:"ConnectedRealities.eu",
+  bio:"Prawie 20 lat prowadzi własne firmy w różnych branżach. Ekspertka w pozyskiwaniu funduszy unijnych dla przedsiębiorców w innowacjach i transformacji cyfrowej. Specjalistka VR w Łódzkiej SSE. Zarządza projektami VR/AR/3D, certyfikaty Prince2 i PMI.",
+  offers:["sprzedaż technologii dużym firmom","fundusze unijne","VR, AR i metaverse","zarządzanie projektami","specjalne strefy ekonomiczne"],
+  tags:["enterprise","sprzedaz","dotacje","vr","b2b"],
+  session:"Speak „Dlaczego korpo kocha małych? Sprzedawanie technologii dużym firmom”", when:"25.08 12:00" },
+
+{ id:"michal-lidzbarski", url:"https://www.parp.gov.pl/component/publications/author/lidzbarski-michal", name:"Michał Lidzbarski", role:"CEO", company:"Web to Learn / MultiTools",
+  bio:"Współwłaściciel Web to Learn — wiodącej w Polsce platformy do tworzenia i sprzedaży kursów online: 1,47 mln użytkowników, 545 mln zł przychodów. Przedsiębiorca od 16 roku życia. Założyciel MultiTools — narzędzia AI do tworzenia agentów. Założyciel Krajowego Centrum Badań o Sztucznej Inteligencji. 20 lat w marketingu i sprzedaży, dekada w e-learningu. Autor pięciu książek.",
+  offers:["budowanie agentów AI","sprzedaż wiedzy i kursów online","e-learning","marketing i sprzedaż","rentowność przed inwestorem","skalowanie do miliona userów"],
+  tags:["ai","agenci","edtech","sprzedaz","marketing"],
+  session:"Speak „Biznes musi zarabiać: firma, która sprzedaje zanim poprosi o inwestora”", when:"25.08 12:25" },
+
+{ id:"artur-wala", url:"https://www.parp.gov.pl/component/publications/author/wala-artur", name:"Artur Wala", role:"Founder Modelguide; organizator AI Tinkerers i GTM Tech Week", company:"Modelguide",
+  bio:"Founder Modelguide — inżynieryjnego studia GTM. Organizator AI Tinkerers oraz GTM Tech Week. Buduje największą społeczność growth w spółkach technologicznych.",
+  offers:["GTM inżynieryjny","growth","społeczność AI Tinkerers i GTM Tech Week","budowanie marki globalnej"],
+  tags:["gtm","growth","spolecznosc","ai"],
+  session:"Panel „Jak budować globalną markę”", when:"24.08 16:50" },
+
+{ id:"paulina-kotowska", url:"https://www.parp.gov.pl/component/publications/author/kotowska-paulina", name:"Paulina Kotowska", role:"Founderka INCEPTI, Coach Innowacji", company:"INCEPTI",
+  bio:"23 lata doświadczenia korporacyjnego w globalnym fintechu, automatyce przemysłowej i farmacji. Dziś coach innowacji pracujący ze startupami wchodzącymi w erę AI. Wykłada na Executive MBA na UW. Akredytacja EMCC.",
+  offers:["definiowanie persony klienta","research klienta","transformacja i operacje","perspektywa fintechu, przemysłu i farmacji","coaching założycieli"],
+  tags:["produkt","klient","coaching","warsztat","enterprise"],
+  session:"Warsztat „Persona Hunt. Jak wytropić idealnego klienta?”", when:"24.08 14:30" },
+
+/* ================= MARKETING, PR, MARKA ================= */
+{ id:"angelika-sobolewska", url:"https://www.parp.gov.pl/component/publications/author/sobolewska-angelika", name:"Angelika Sobolewska", role:"Założycielka i CEO", company:"midnight issue",
+  bio:"W influencer marketingu od początku istnienia branży. Agencja rozwija narzędzie JASMINE mierzące dopasowanie marki do twórcy. Współtworzyła Sandra's — markę zdrowej żywności zbudowaną na marce osobistej, z exitem. Kampanie dla Nike, LVMH, Huawei, Cannes Film Festival.",
+  offers:["influencer marketing w B2B","kampanie z twórcami","budowanie marki na marce osobistej","exit marki konsumenckiej","współpraca z globalnymi markami"],
+  tags:["marketing","influencer","b2b","social","exit"],
+  session:"Fireside „Influencer marketing w B2B - od rolek do sprzedaży”", when:"24.08 18:10" },
+
+{ id:"danuta-rolinger-bednarska", url:"https://www.parp.gov.pl/component/publications/author/rolinger-bednarska-danuta", name:"Danuta Rolinger-Bednarska", role:"CEO Rolinger PR, psycholog", company:"Rolinger PR",
+  bio:"Prowadzi butikową agencję PR od ponad dekady, wspierając founderów i liderów w budowaniu widoczności. Kampanie dla Valeant, Polfarmex, Henkel. Klienci pojawiają się w Forbes i Rzeczpospolitej. Magister psychologii UW.",
+  offers:["marka osobista foundera","wejście do dużych mediów","PR dla startupu","psychologia w komunikacji"],
+  tags:["pr","marka","marketing","warsztat"],
+  session:"Warsztat „Marka osobista foundera - najtańszy marketing startupu”", when:"25.08 15:00" },
+
+{ id:"jaroslaw-sroka", url:"https://www.parp.gov.pl/component/publications/author/sroka-jaroslaw", name:"Jarosław Sroka", role:"Członek Zarządu", company:"KI Next",
+  bio:"Menedżer komunikacji korporacyjnej i rynku mediów. Wieloletni dziennikarz ekonomiczny, redaktor naczelny Pulsu Biznesu, Gazety Prawnej i Newsweek Polska. Od 2009 nadzoruje komunikację korporacyjną, relacje inwestorskie, marketing i public affairs. IESE Business School. Działa w mentoringu i radach naukowych.",
+  offers:["komunikacja korporacyjna","relacje inwestorskie","public affairs","dotarcie do mediów ekonomicznych","mentoring"],
+  tags:["pr","media","jury","komunikacja","relacje-inwestorskie"],
+  session:"Przewodniczący jury PARP Future Challenge", when:"24.08, bloki 14:30 / 16:10 / 17:30" },
+
+{ id:"monika-kaczmarek-sliwinska", url:"https://www.parp.gov.pl/component/publications/author/kaczmarek-sliwinska-dr-hab-monika", name:"dr hab. Monika Kaczmarek-Śliwińska", role:"prof. UW; Przewodnicząca Komisji Etyki Public Relations", company:"Uniwersytet Warszawski / PAN",
+  bio:"Medioznawczyni, ekspertka i doradczyni w komunikowaniu się z mediami i zarządzaniu sytuacjami kryzysowymi. Specjalizuje się w PR, etyce komunikowania, nowych mediach i komunikacji kryzysowej. Wykłada na UW, Koźmińskim, Politechnice Warszawskiej i w PAN.",
+  offers:["zarządzanie kryzysem wizerunkowym","etyka komunikacji","relacje z mediami","współpraca z uczelnią"],
+  tags:["pr","kryzys","nauka","komunikacja"],
+  session:"Debata „Czy uczelnia jest jeszcze potrzebna?”", when:"24.08 15:30" },
+
+{ id:"paulina-mikula", url:"https://www.parp.gov.pl/component/publications/author/mikula-paulina", name:"Paulina Mikuła", role:"Popularyzatorka wiedzy, autorka, wokalistka, influencerka", company:"",
+  bio:"Od trzynastu lat tworzy materiały edukacyjne o polszczyźnie dla mediów społecznościowych. Trzy książki: Mówiąc inaczej (2016), LiteraTOURa (2020), Prosty poradnik językowy (2025). Laureatka Kuźni Mistrzów Mowy Polskiej Vox Populi.",
+  offers:["budowanie zasięgu w social media","komunikacja z szeroką publicznością","content edukacyjny","występowanie przed kamerą"],
+  tags:["media","influencer","komunikacja","social"],
+  session:"Host wydarzenia + fireside o influencer marketingu", when:"24.08" },
+
+/* ================= AI, PRODUKT, TECHNOLOGIA ================= */
+{ id:"igor-pielas", url:"https://www.parp.gov.pl/component/publications/author/pielas-igor", name:"Igor Pielas", role:"CEO Activy; prowadzi AI Business Builders", company:"Activy",
+  bio:"Od dekady buduje produkty technologiczne. Activy to platforma sportowych wyzwań używana przez pół miliona osób w ponad 400 firmach. Zbudował ponad 120 aplikacji z AI, od mini-narzędzi po złożone systemy produkcyjne; obecnie rozwija głównie SYSTEMY AGENTOWE. Prowadzi AI Business Builders. Deloitte Technology Fast 500 EMEA 2024.",
+  offers:["systemy agentowe","budowa firmy AI-native","120+ wdrożonych aplikacji AI","sprzedaż B2B do 400 firm","produkt konsumencki i grywalizacja"],
+  tags:["ai","agenci","produkt","b2b","b2c"],
+  session:"Speak „Budowanie AI-Native firmy od startu”", when:"25.08 15:00" },
+
+{ id:"pawel-kiszczak", url:"https://www.parp.gov.pl/component/publications/author/kiszczak-pawel", name:"Paweł Kiszczak", role:"AI/ML Engineer", company:"SpeakLeash / Bielik",
+  bio:"Specjalizuje się w projektowaniu i wdrażaniu zaawansowanych SYSTEMÓW AGENTOWYCH. Aktywny członek społeczności SpeakLeash i Bielik, współtwórca modelu Bielik-Minitron-7B. Liczne wdrożenia komercyjne. Ekspert architektury AI on-premises w branżach regulowanych. Zgłębia optymalizację modeli — pruning strukturalny i destylacja.",
+  offers:["systemy agentowe","wdrożenia LLM","AI on-premises w branżach regulowanych","polskie modele językowe","optymalizacja modeli"],
+  tags:["ai","agenci","ml","tech","warsztat"],
+  session:"Future_Lab — dwudniowy warsztathon AI", when:"24-25.08" },
+
+{ id:"max-malecki", url:"https://www.parp.gov.pl/component/publications/author/malecki-max", name:"Max Małecki", role:"Tech Lead; Trener Eskadry Bielika", company:"Insly (insurtech)",
+  bio:"Przeprowadził w firmie transformację AI: nauczył 15-osobowy zespół automatyzować powtarzalną robotę, dziś koduje około czterokrotnie wydajniej. 20 lat w zawodzie, magister informatyki UAM. Buduje produkcyjne systemy oparte na LLM w ściśle regulowanym środowisku ubezpieczeniowym; jeden z prototypów zdał z wyróżnieniem egzamin KNF dla brokerów. Uczy programistów używać modeli Bielik w prawdziwych systemach.",
+  offers:["LLM w produkcji","transformacja AI w zespole","insurtech i branże regulowane","prowadzenie zespołu technicznego","wydajność developmentu z AI"],
+  tags:["ai","insurtech","tech","fintech","warsztat"],
+  session:"Future_Lab — dwudniowy warsztathon AI", when:"24-25.08" },
+
+{ id:"matt-jedraszczyk", url:"https://www.parp.gov.pl/component/publications/author/jedraszczyk-matt", name:"Matt Jędraszczyk", role:"Lead AI & Automation", company:"Grant Thornton (Edisonda)",
+  bio:"Łączy rygor korporacyjnego bezpieczeństwa z szybkością VC i własnym doświadczeniem startup foundera. Praktyk automatyzacji i AI, WSPÓŁTWÓRCA PIERWSZEGO POLSKIEGO CHATBOTA SPRZEDAŻOWEGO. Buduje działające produkty i automatyzuje procesy biznesowe na platformach low-code z nadzorem człowieka.",
+  offers:["automatyzacja procesów","chatboty i asystenci sprzedażowi","low-code","AI w dużej organizacji","governance i bezpieczeństwo AI"],
+  tags:["ai","agenci","automatyzacja","korporacja","warsztat"],
+  session:"Future_Lab — dwudniowy warsztathon AI", when:"24-25.08" },
+
+{ id:"marek-wolanski", url:"https://www.parp.gov.pl/component/publications/author/wolanski-marek", name:"Marek Wolański", role:"AI & Marketing Strategy Consultant", company:"Bielik.AI / Pirxey / Pretius / Uniwersytet Civitas",
+  bio:"12+ lat w marketingu, strategii i zarządzaniu produktami. Doradzał ponad 300 firmom. Specjalizuje się w projektowaniu modeli biznesowych, strategii wzrostu i praktycznym wykorzystaniu AI. Współtworzył agencje technologiczne, zarządzał rozwojem 7+ produktów cyfrowych i SaaS. Prowadzi kurs kampanii reklamowych wspieranych przez AI.",
+  offers:["strategia marketingowa z AI","modele biznesowe","strategia wzrostu","rozwój produktów SaaS","doradztwo"],
+  tags:["ai","marketing","strategia","saas","warsztat"],
+  session:"Future_Lab — dwudniowy warsztathon AI", when:"24-25.08" },
+
+{ id:"maciej-szymanski", url:"https://www.parp.gov.pl/component/publications/author/szymanski-maciej-krystian", name:"Maciej Krystian Szymański", role:"", company:"BIELIK.AI (SpeakLeash) / Edisonda",
+  bio:"Rozwija narzędzia AI open-source w BIELIK.AI tworzonym przez SpeakLeash, gdzie społeczności mogą współkształtować rozwiązania. Dla Edisondy wspomaga firmy w transformacji cyfrowej z zachowaniem aspektu ludzkiego.",
+  offers:["otwarte modele AI","polski LLM Bielik","transformacja cyfrowa firm","budowanie społeczności open-source"],
+  tags:["ai","open-source","transformacja","warsztat"],
+  session:"Future_Lab — dwudniowy warsztathon AI", when:"24-25.08" },
+
+{ id:"dominika-grajewska", url:"https://www.parp.gov.pl/component/publications/author/grajewska-dominika", name:"Dominika Grajewska", role:"Ekspertka NLP", company:"NASK – Państwowy Instytut Badawczy",
+  bio:"Rozwija rodzinę modeli językowych PLLuM, specjalizuje się w NLP i dużych modelach językowych. Koordynatorka wdrożeń i partnerstw projektu HIVE 2. Autorka publikacji naukowych, wykładowczyni, prelegentka TEDx.",
+  offers:["NLP i modele językowe","produkty AI na otwartych modelach","polskie LLM PLLuM","partnerstwa badawcze","wystąpienia TEDx"],
+  tags:["ai","nlp","nauka","open-source"],
+  session:"Speak „Made in Poland – budowanie produktów AI na otwartych modelach”", when:"25.08 15:50" },
+
+{ id:"adam-wisniewski", url:"https://www.parp.gov.pl/component/publications/author/wisniewski-adam", name:"Adam Wiśniewski", role:"Współzałożyciel i CTO", company:"AI Clearing",
+  bio:"Buduje agentyczną platformę AI do zarządzania realizacją największych inwestycji infrastrukturalnych na świecie (spółka polsko-amerykańska). Wcześniej kierował rozwiązaniami ML w PwC dla energetyki i przemysłu. 20+ lat na przecięciu technologii i budownictwa. Laureat EY Entrepreneur of the Year 2025 w kategorii Nowy Biznes.",
+  offers:["agentyczne platformy AI","AI w przemyśle i budownictwie","sprzedaż na rynek amerykański","ML w energetyce","rola CTO w skalującym się deeptechu"],
+  tags:["ai","agenci","przemysl","zagranica","deeptech"],
+  session:"Speak „Zedrzyj z siebie wstyd - czego polskie startupy się nie nauczą”", when:"24.08 16:40" },
+
+{ id:"mateusz-chrobok", url:"https://www.parp.gov.pl/component/publications/author/chrobok-mateusz", name:"Mateusz Chrobok", role:"Twórca uczmnie.pl, współtwórca aidevs.pl", company:"",
+  bio:"Głowa kilku biznesów, twórca platformy edukacyjnej uczmnie.pl i kursu aidevs.pl. Zagląda pod maskę systemów bezpieczeństwa i AI. Rozwija startupy, prowadzi kanał edukacyjny na YouTube, tłumaczy jak bezpiecznie korzystać z sieci.",
+  offers:["cyberbezpieczeństwo i walka z fraudem","budowanie firmy edukacyjnej","społeczność i kanał na YouTube","AI od strony bezpieczeństwa"],
+  tags:["cybersec","ai","edukacja","spolecznosc","media"],
+  session:"Keynote „Startup walczący z fraudem — lekcje z budowania firmy”", when:"24.08 12:45" },
+
+{ id:"bartosz-szuryga", url:"https://www.parp.gov.pl/component/publications/author/szuryga-bartosz", name:"Bartosz Szuryga", role:"CTO & Co-Founder", company:"Gridaly",
+  bio:"Zarządza zespołem IT i odpowiada za rozwój technologiczny platformy do zarządzania wydarzeniami — od architektury po wdrażanie funkcjonalności. Łączy frontend, backend i zarządzanie IT. Forbes 30 Under 30 Polska.",
+  offers:["budowa produktu z AI w zespole","architektura techniczna","rola CTO","eventtech"],
+  tags:["ai","cto","produkt","eventtech","tech"],
+  session:"Speak „Jak budować produkt, gdy AI jest członkiem zespołu”", when:"24.08 14:10" },
+
+{ id:"michal-ratajczak", url:"https://www.parp.gov.pl/component/publications/author/ratajczak-michal", name:"Michał Ratajczak", role:"CEO i współzałożyciel", company:"Gridaly",
+  bio:"CEO startupu tworzącego oprogramowanie usprawniające zarządzanie wydarzeniami i doświadczenie uczestników. Forbes 30 Under 30 Polska, Sigma Squared Society Poland Executive.",
+  offers:["networking i budowanie relacji","eventtech","prowadzenie firmy","doświadczenie uczestnika wydarzeń"],
+  tags:["networking","eventtech","ceo"],
+  session:"Speak „Networking - jak budować relacje jak CEO”", when:"24.08 12:05" },
+
+{ id:"piotr-grzegorczyk", url:"https://www.parp.gov.pl/component/publications/author/grzegorczyk-piotr", name:"Piotr Grzegorczyk", role:"CEO i współzałożyciel", company:"Deepflare",
+  bio:"Matematyk teoretyczny (UW). W 2020 założył Deepflare — startup techbio tworzący platformę AI do projektowania białek, szczepionek i immunoterapii nowotworów. Modele ML osiągają wielokrotnie wyższą skuteczność predykcji niż standardowe narzędzia. Forbes 30 Under 30 Europe. Pozyskał 1,5 mln euro od inwestorów z Polski, Niemiec i USA. Współpracuje z firmami biotech i farmaceutycznymi.",
+  offers:["techbio i AI w biologii","pozyskanie rundy od inwestorów zagranicznych","współpraca z Big Pharma","budowanie deeptechu z nauki"],
+  tags:["deeptech","ai","biotech","pharma","zagranica"],
+  session:"Fireside „Spowiedź. Wszystkie grzechy foundera”", when:"24.08 17:40" },
+
+{ id:"piotr-lazarek", url:"https://www.parp.gov.pl/component/publications/author/lazarek-piotr", name:"Piotr Lazarek", role:"Prezes zarządu", company:"Nirby",
+  bio:"25-letni przedsiębiorca i innowator. Absolwent analityki biznesowej w Wharton School i inżynierii komputerowej na University of Pennsylvania. Forbes 30 przed 30. 1. miejsce w rankingu najlepszych polskich startupów 2025 wg Forbesa.",
+  offers:["budowanie startupu od zera","edukacja i kontakty w USA","szczere doświadczenia foundera"],
+  tags:["founder","produkt","zagranica","usa"],
+  session:"Fireside „Spowiedź. Wszystkie grzechy foundera”", when:"24.08 17:40" },
+
+{ id:"dominik-zdybal", url:"https://www.parp.gov.pl/component/publications/author/zdybal-dominik", name:"Dominik Zdybał", role:"CEO / Founder", company:"Alpha Powders",
+  bio:"", offers:["hardware i materiały","druk 3D z proszków metali","komercjalizacja technologii"],
+  tags:["hardware","deeptech","produkcja"],
+  session:"Fireside „Przetarli szlak - rozmowa z founderem”", when:"25.08 10:20" },
+
+{ id:"agnieszka-cichocka", url:"https://www.parp.gov.pl/component/publications/author/cichocka-agnieszka", name:"Agnieszka Cichocka", role:"CEO", company:"CreativeTech Poland",
+  bio:"Kieruje platformą budującą ekosystem Creative Tech w Polsce. Prowadziła międzynarodowe projekty artystyczne, ekspertka Europejskiego Instytutu Innowacji i Technologii ds. kultury i kreatywności. Projektowała i kierowała programami akceleracyjnymi dla Google for Startups, Grupy Żabka i Visa Foundation — wsparła ponad 200 startupów.",
+  offers:["creative tech","programy akceleracyjne","dostęp do Google for Startups, Żabki i Visa Foundation","branża kreatywna","projekty europejskie"],
+  tags:["creativetech","akceleracja","media","program"],
+  session:"Speak „Creative tech i dlaczego rośnie szybciej niż myślicie”", when:"24.08 18:00" },
+
+{ id:"anita-ciesielska", url:"https://www.parp.gov.pl/component/publications/author/ciesielska-anita", name:"dr hab. Anita Ciesielska", role:"prof., autorka Akademii Kompetencji Cyfrowych", company:"Uniwersytet Łódzki",
+  bio:"Pracuje na styku nauki, edukacji i nowych technologii. Łączy doświadczenie mikrobiolożki molekularnej i nauczycielki akademickiej z tworzeniem nowoczesnych rozwiązań dydaktycznych. Wspiera odpowiedzialne wykorzystanie AI w szkolnictwie wyższym, działa w Grupie Roboczej ds. AI przy Ministerstwie Cyfryzacji, współpracuje z Fundacją SpeakLeash.",
+  offers:["AI w szkolnictwie wyższym","współpraca z uczelnią","biotechnologia i mikrobiologia","polityka AI przy Ministerstwie Cyfryzacji"],
+  tags:["ai","nauka","edukacja","warsztat"],
+  session:"Future_Lab — dwudniowy warsztathon AI", when:"24-25.08" },
+
+/* ================= ZESPÓŁ, LUDZIE, WYSTĄPIENIA ================= */
+{ id:"roza-szafranek", url:"https://www.parp.gov.pl/component/publications/author/szafranek-roza", name:"Róża Szafranek", role:"Prezeska i założycielka", company:"HR Hints",
+  bio:"Autorka metody układania kultur organizacji Culturivy, wydanej w USA. Firma wspomogła ponad 300 organizacji w transformacji, wdrażaniu procesów i osiąganiu celów biznesowych. Prowadzi podcast Ludzie z pracy, założyła Akademię Lepszej Pracy. Wyróżnienia od Forbes, Venteur, Rzeczpospolitej.",
+  offers:["dlaczego zespół nie dowozi","kultura organizacji","HR w startupie","procesy w firmie","budowa zespołu"],
+  tags:["hr","zespol","kultura"],
+  session:"Speak „Dlaczego zespół nie dowozi wyników?”", when:"24.08 16:00" },
+
+{ id:"malgorzata-piotrowska", url:"https://www.parp.gov.pl/component/publications/author/piotrowska-malgorzata", name:"Małgorzata Piotrowska", role:"Founding Talent Lead", company:"Quesma",
+  bio:"Rekruterka i specjalistka od budowania sieci ekspertów. Po 8 latach w Londynie wróciła do Warszawy. Rozwija biznes i strategię firmy, skupiając się na token economics — dyscyplinie zarządzania kosztem wdrożenia LLM w organizacjach. Wcześniej w GLG w Londynie zbudowała od podstaw sieć ekspertów EMEA dla funduszy private equity i klientów korporacyjnych.",
+  offers:["rekrutacja do startupu","budowanie sieci ekspertów","koszty wdrożenia LLM","dotarcie do private equity","rynek londyński"],
+  tags:["hr","rekrutacja","ai","zespol","zagranica"],
+  session:"Panel „Poland-maxxing”", when:"24.08 11:20" },
+
+{ id:"kamil-koziel", url:"https://www.parp.gov.pl/component/publications/author/koziel-kamil", name:"Kamil Kozieł", role:"Trener wystąpień publicznych", company:"",
+  bio:"Przeprowadził ponad 2000 szkoleń ze storytellingu, prezentacji i wystąpień publicznych. Szkoli po polsku, angielsku i hiszpańsku. Specjalizuje się w tworzeniu PREZENTACJI DLA DUŻYCH PROJEKTÓW BIZNESOWYCH. Autorska metodyka oparta na AI i procesowym podejściu do przygotowania wystąpień.",
+  offers:["budowanie prezentacji i pitch decków","storytelling","wystąpienia publiczne","prezentacje dla dużych projektów biznesowych"],
+  tags:["pitch","prezentacja","szkolenie","storytelling"],
+  session:"Keynote „Jak budować prezentacje, które mają sens” (50 min)", when:"24.08 13:20" },
+
+{ id:"kamil-kijonka", url:"https://www.parp.gov.pl/component/publications/author/kijonka-kamil", name:"Kamil Kijonka", role:"Logopeda i trener oddechu", company:"",
+  bio:"Specjalizuje się w pracy z dorosłymi: koryguje wady wymowy, doskonali dykcję i pomaga budować pewny głos w sytuacjach, w których liczy się każde słowo.",
+  offers:["głos i emisja","dykcja","pewność w wystąpieniu","praca z oddechem"],
+  tags:["wystapienia","szkolenie","warsztat"],
+  session:"Warsztat „Mów jak lider. Głos budujący uwagę i wiarygodność” (3h)", when:"25.08 10:00" },
+
+{ id:"mateusz-pniak", url:"https://www.parp.gov.pl/component/publications/author/pniak-mateusz", name:"Mateusz Pniak", role:"Portfolio manager, moderator wydarzeń", company:"",
+  bio:"Prowadzący konferencje, gale i wydarzenia branżowe jako moderator. Prowadzi warsztaty i szkolenia z radzenia sobie ze stresem oraz doskonalenia umiejętności prezentacyjnych.",
+  offers:["prowadzenie wydarzeń","moderacja paneli","radzenie sobie ze stresem","umiejętności prezentacyjne"],
+  tags:["event","media","szkolenie"],
+  session:"Host całego wydarzenia", when:"24-25.08" },
+
+{ id:"martyna-kozlowska-zukowska", url:"https://www.parp.gov.pl/component/publications/author/kozlowska-zukowska-martyna", name:"Martyna Kozłowska-Żukowska", role:"Trenerka i coach ICF, project managerka", company:"NCBR",
+  bio:"Certyfikowana trenerka i coach rozwoju osobistego (ICF), doświadczona project managerka, od lat w środowisku naukowo-innowacyjnym. Od 13 lat wspiera naukowców i przedsiębiorców realizujących projekty B+R jako pracowniczka NCBR.",
+  offers:["projekty B+R","NCBR od środka","coaching","zarządzanie projektami badawczymi"],
+  tags:["dotacje","ncbir","coaching","nauka"],
+  session:"Debata „Czy uczelnia jest jeszcze potrzebna?”", when:"24.08 15:30" },
+
+{ id:"oswald-pereira", url:"https://www.parp.gov.pl/component/publications/author/pereira-oswald-rodrigo", name:"Oswald Rodrigo Pereira", role:"Filmowiec, reżyser, himalaista", company:"",
+  bio:"Uczestnik kilkunastu wypraw w Himalaje i Karakorum, autor nagradzanych filmów dokumentalnych. Specjalizuje się w dokumentach kręconych w skrajnych warunkach — Czarnobyl, Afganistan, Kazachstan.",
+  offers:["zarządzanie ryzykiem","produkcja filmowa w trudnych warunkach","opowiadanie historii","działanie pod presją"],
+  tags:["ryzyko","media","video","motywacja"],
+  session:"Speak „Zarządzanie ryzykiem – przeżycie w strefie śmierci”", when:"24.08 14:10" },
+
+{ id:"aleksandra-benowska", url:"https://www.parp.gov.pl/component/publications/author/benowska-aleksandra", name:"Aleksandra Benowska", role:"Fundatorka i prezeska", company:"Fundacja Kanał Studencki",
+  bio:"Zbudowała społeczność łączącą biznes, uczelnie i środowisko studenckie. Specjalistka transformacji i innowacji, wspiera adopcję AI w korporacji, wcześniej tworzyła projekty technologiczne w instytucji B+R. Prowadzi warsztaty z Design Thinking dla firm i studentów.",
+  offers:["design thinking","adopcja AI w korporacji","budowanie społeczności studenckiej","dotarcie do studentów","badanie potrzeb użytkowników"],
+  tags:["design","warsztat","edukacja","spolecznosc","korporacja"],
+  session:"Warsztat „Design Thinking w erze AI”", when:"25.08 13:45" },
+
+{ id:"natalia-krol", url:"https://www.parp.gov.pl/component/publications/author/krol-natalia", name:"Natalia Król", role:"Zarząd; Marketing Science Analyst", company:"Fundacja Kanał Studencki",
+  bio:"Wykształcenie w analizie danych, zawodowo Marketing Science Analyst wspierający globalne marki w decyzjach opartych na danych. W Fundacji odpowiada za skalowanie działań, budowanie zespołów i mentoring talentów. Współtworzy konferencję KOMPETENTNI, zjazd IMPULS i projekt tuMATURA.",
+  offers:["analiza danych marketingowych","decyzje oparte na danych","skalowanie organizacji","budowanie zespołów","design thinking"],
+  tags:["dane","marketing","design","warsztat","edukacja"],
+  session:"Warsztat „Design Thinking w erze AI”", when:"25.08 13:45" },
+
+/* ================= SPOŁECZNOŚĆ I EKOSYSTEM ================= */
+{ id:"aleksandra-lemanska", url:"https://www.parp.gov.pl/component/publications/author/lemanska-aleksandra", name:"Aleksandra Lemańska", role:"Founderka LemanSkills, Prezeska Fundacji", company:"Startup Community Poznań",
+  bio:"CQ Leadership Mentor & Speaker. Certyfikaty Process Communication Model, analityka transakcyjnego i Change Managera. Psychologia Zarządzania na Koźmińskim, podyplomowo Transition Management. Wspiera liderów w IT, technologii i inżynierii metodą CQ Leadership — zaangażowanie i efektywność zespołów przez strategie komunikacyjne i analizę motywacji.",
+  offers:["przywództwo i komunikacja w zespole","społeczność startupowa w Poznaniu","zarządzanie zmianą","motywacja zespołu"],
+  tags:["spolecznosc","mentoring","hr","zespol"],
+  session:"Panel „Community, które buduje polski ekosystem” + poranny bieg", when:"24.08 17:00, 25.08 08:15" },
+
+{ id:"kewin-czuprynski", url:"https://www.parp.gov.pl/component/publications/author/czuprynski-kewin", name:"Kewin Czupryński", role:"Founder", company:"STARTUP FOUNDERS STARS",
+  bio:"Twórca inicjatywy łączącej studentów uczelni z founderami i ekspertami branżowymi. Przez 5 lat tworzył rozwiązania technologiczne w software house'ach i firmach produktowych, specjalizując się we wdrażaniu AI i automatyzacji. Przez 3 lata przewodniczący Samorządu Studenckiego Koźmińskiego i mentor.",
+  offers:["dotarcie do studentów i młodych founderów","wdrażanie AI i automatyzacji","organizacja wydarzeń startupowych","most akademia-biznes"],
+  tags:["spolecznosc","networking","ai","event","edukacja"],
+  session:"Panel „Community, które buduje polski ekosystem”", when:"24.08 17:00" },
+
+{ id:"paulina-muszynska", url:"https://www.parp.gov.pl/component/publications/author/muszynska-paulina", name:"Paulina Muszyńska", role:"Kierowniczka Startup Wrocław; Przewodnicząca Rady Fundacji Startup Poland", company:"ARAW",
+  bio:"Zarządza projektem Startup Wroclaw. Od 10+ lat w rozwoju projektów i zarządzaniu wydarzeniami — krajowe i międzynarodowe szkolenia i konferencje. Współzałożycielka Wrocław Tech Business Angels Club i TechSHEroes. Od stycznia 2026 Przewodnicząca Rady Fundacji Startup Poland. Business Angel of the Year 2024, 9. miejsce w rankingu 50 Najbardziej Kreatywnych Ludzi w Biznesie 2025.",
+  offers:["dostęp do aniołów biznesu we Wrocławiu","ekosystem wrocławski","Startup Poland","organizacja wydarzeń","wsparcie kobiet w STEM"],
+  tags:["spolecznosc","wroclaw","aniol","ekosystem","event"],
+  session:"Panel „Community, które buduje polski ekosystem”", when:"24.08 17:00" },
+
+{ id:"antoni-pozywilko", url:"https://www.parp.gov.pl/component/publications/author/pozywilko-antoni", name:"Antoni Pożywiłko", role:"Członek zarządu Startup Community Poznań; Współzałożyciel Polucky", company:"Polucky",
+  bio:"Twórca lokalnego ekosystemu startupowego i pomysłodawca Startup Community Summit. Współzałożyciel Polucky — venture studio zorientowanego na AI. Zarządzanie na UE w Poznaniu, rozwija się w project managemencie, budowaniu społeczności i projektowaniu modeli biznesowych wspieranych przez AI.",
+  offers:["venture studio","modele biznesowe z AI","budowanie społeczności","ekosystem poznański"],
+  tags:["spolecznosc","ai","venture-studio","networking"],
+  session:"Fireside „Spowiedź. Wszystkie grzechy foundera” + poranny bieg", when:"24.08 17:40, 25.08 08:15" },
+
+{ id:"michal-wlodarczyk", url:"https://www.parp.gov.pl/component/publications/author/wlodarczyk-michal", name:"Michał Włodarczyk", role:"Program Manager", company:"Fundacja Venture Café Warsaw",
+  bio:"Odpowiada za program Thursday Gathering — cykliczne otwarte wydarzenia w sercu polskiego ekosystemu innowacji, średnio 370 uczestników, ułatwiające budowanie relacji biznesowych i poszukiwanie inwestorów. 18+ lat doświadczenia w farmacji, reklamie i badaniach. Od 4 lat w ekosystemie innowacji.",
+  offers:["Thursday Gathering","cotygodniowy networking w Warszawie","dostęp do ekosystemu innowacji","branża farmaceutyczna"],
+  tags:["spolecznosc","networking","event"],
+  session:"Host konkursów PARP Future Challenge", when:"24-25.08" },
+
+{ id:"zachariasz-stachowiak", url:"https://www.parp.gov.pl/component/publications/author/stachowiak-zachariasz", name:"Zachariasz Stachowiak", role:"Lider Projektu EAGLES (Fundacja Marka Polska); Chief of Staff", company:"Pointer.Capital",
+  bio:"Prowadzi EAGLES — Marka Polska oczami młodych. W Pointer.Capital wspiera rozwój strategiczny, buduje partnerstwa i koordynuje inicjatywy wzrostowe w ekosystemie inwestycyjnym. Współtworzy ekosystem STARTUP FOUNDERS STARS, koordynuje programy mentorskie łączące studentów, founderów, inwestorów i ekspertów. Absolwent EMLYON Business School i Koźmińskiego.",
+  offers:["marka Polska jako przewaga","partnerstwa strategiczne","dostęp do Pointer.Capital","programy mentorskie"],
+  tags:["marka","vc","spolecznosc","zagranica"],
+  session:"Roundtable „Młodzi projektują markę - Polska” + panel o globalnej marce", when:"24.08 10:00 i 16:50" },
+
+{ id:"maciej-nadzikiewicz", name:"Maciej Artur Nadzikiewicz", role:"Board", company:"Wikimedia Foundation",
+  bio:"", offers:["organizacje globalne","otwarta wiedza","budowanie marki na świecie"],
+  tags:["marka","zagranica","ngo"],
+  session:"Panel „Jak budować globalną markę”", when:"24.08 16:50" },
+
+{ id:"maria-belka", name:"Maria Belka", role:"Współzałożycielka i prezeska", company:"Mentors4Starters",
+  bio:"", offers:["mentoring dla startupów","przedsiębiorczość społeczna","łączenie misji z biznesem"],
+  tags:["mentoring","impact","spolecznosc"],
+  session:"Speak „Między misją a biznesem”", when:"24.08 13:30" },
+
+{ id:"karolina-piotrowska", name:"Karolina Piotrowska", role:"Członkini Zarządu", company:"Startup Academy",
+  bio:"", offers:["edukacja founderów","programy rozwojowe"],
+  tags:["edukacja","program","spolecznosc"],
+  session:"Startup Academy", when:"24-25.08" },
+
+{ id:"adam-kaminski", url:"https://www.parp.gov.pl/component/publications/author/kaminski-adam", name:"Adam Kamiński", role:"Prezes i założyciel", company:"Fundacja INFOTECH",
+  bio:"Prawnik ze specjalizacją w nowych technologiach, podyplomowo zarządzanie wiedzą i Data Science. Ekspert innowacji technologicznych — strategia biznesowa, transformacja cyfrowa, zarządzanie zespołami. Od siedmiu lat kieruje organizacją unowocześniającą dydaktykę z AI. Pod jego kierownictwem INFOTECH stał się pierwszym w Polsce klastrowym technikum programistycznym i Referencyjną Szkołą Google.",
+  offers:["prawo nowych technologii","AI w edukacji","dostęp do szkół i technikum","transformacja cyfrowa","projekty w NGO"],
+  tags:["prawo","edtech","ngo","ai","warsztat"],
+  session:"Future_Lab — dwudniowy warsztathon AI", when:"24-25.08" },
+
+{ id:"marek-loszczyk", url:"https://www.parp.gov.pl/component/publications/author/loszczyk-marek", name:"Marek Łoszczyk", role:"Przedsiębiorca społeczny", company:"",
+  bio:"", offers:["przedsiębiorczość społeczna","modele impactowe"],
+  tags:["impact","ngo","warsztat"],
+  session:"Future_Lab — dwudniowy warsztathon AI", when:"24-25.08" },
+
+/* ================= PARP ================= */
+{ id:"krzysztof-gulda", url:"https://www.parp.gov.pl/component/publications/author/krzysztof-gulda", name:"Krzysztof Gulda", role:"Prezes", company:"PARP",
+  bio:"Fizyk (UW), przedsiębiorca i strateg w sektorze publicznym i prywatnym. Współtwórca Uniwersyteckiego Ośrodka Transferu Technologii. Od 2016 w zarządzie UWRC wspierającej spółki spin-off — uczestniczył w zakładaniu i zarządzał ponad 20 spółkami technologicznymi przy UW. Rada NCBR, dyrektor Departamentu Strategii w MNiSW. 20+ lat w budowaniu systemu innowacji w Polsce.",
+  offers:["kierunki wsparcia PARP","transfer technologii z uczelni","spółki spin-off","polityka innowacyjna"],
+  tags:["parp","dotacje","decydent","nauka","transfer"],
+  session:"Wystąpienie Prezesa", when:"24.08 13:10" },
+
+{ id:"marcin-seniuk", url:"https://www.parp.gov.pl/component/publications/author/seniuk-marcin", name:"Marcin Seniuk", role:"Dyrektor Centrum Rozwoju Startupów", company:"PARP",
+  bio:"Od kilkunastu lat pracuje z funduszami europejskimi, w PARP od 2008. Odpowiada za projekty akceleracji startupów, program Platformy startowe dla Polski Wschodniej oraz Poland Prize. Nadzoruje pilotażowe instrumenty wspierające ekosystem startupowy i projektuje przyszłe instrumenty finansowe UE.",
+  offers:["Platformy startowe","Poland Prize","akceleracja finansowana przez PARP","przyszłe instrumenty UE"],
+  tags:["parp","dotacje","program","akceleracja","decydent"],
+  session:"Wprowadzenie", when:"24.08 13:10" },
+
+{ id:"izabela-banas", url:"https://www.parp.gov.pl/component/publications/author/banas-izabela", name:"Izabela Banaś", role:"Zastępca Dyrektora, Departament Analiz i Strategii", company:"PARP",
+  bio:"Koordynuje projekt inno_LAB, w którym testowane i projektowane są nowe instrumenty wsparcia, oraz prowadzi badania ekosystemu innowacji. Z funduszami europejskimi od 2000 r., zarządzała programami Phare i PO IG. SGH. Projektowała instrumenty wspierające B+R, inwestycje i rozwój oparty na wzornictwie.",
+  offers:["inno_LAB","dane o ekosystemie innowacji","projektowanie instrumentów wsparcia","wzornictwo"],
+  tags:["parp","dane","dotacje","impact"],
+  session:"Speak „Biznes, który zmienia świat”", when:"25.08 10:00" },
+
+{ id:"maja-wasilewska", url:"https://www.parp.gov.pl/component/publications/author/maja-wasilewska", name:"Maja Wasilewska", role:"Ekspert, Centrum Analiz i Strategii", company:"PARP",
+  bio:"Prawniczka (ochrona środowiska), podyplomowo service design na SWPS i CSR na Koźmińskim. 20+ lat na styku biznesu i administracji, w PARP od 2009. Mentorka i jurorka w konkursach dla innowatorów. Prowadzi projekt Startups are us integrujący ekosystem startupowy. Kierownik projektu w EIT Food CLC North-East.",
+  offers:["mentoring projektów zrównoważonych","biznesplany","service design","komercjalizacja","EIT Food i projekty międzynarodowe"],
+  tags:["parp","mentoring","impact","design","foodtech"],
+  session:"Speak „Biznes, który zmienia świat”", when:"25.08 10:00" },
+
+{ id:"karolina-okreglak-hoty", name:"Karolina Okręglak-Hoty", role:"Ekspertka Centrum Rozwoju Startupów", company:"PARP",
+  bio:"", offers:["programy startupowe PARP","wsparcie wczesnej fazy"],
+  tags:["parp","program","dotacje"],
+  session:"Fireside „Przetarli szlak”", when:"25.08 10:20" },
+
+{ id:"aneta-zielinska-sroka", url:"https://www.parp.gov.pl/component/publications/author/zielinska-aneta", name:"Aneta Zielińska-Sroka", role:"Zastępca dyrektora Departamentu Komunikacji i Marketingu", company:"PARP",
+  bio:"Z funduszami UE od 2006 roku. Koordynuje obsługę klienta i współpracę z mediami, prowadzi spotkania, szkolenia, warsztaty i webinaria dla wnioskodawców PARP.",
+  offers:["jak przejść przez wniosek do PARP","obsługa wnioskodawcy","szkolenia dla aplikujących","kompetencje przyszłości"],
+  tags:["parp","dotacje","szkolenie","komunikacja"],
+  session:"Speak „Kompetencje przyszłości”", when:"25.08 10:40" },
+
+{ id:"karolina-dorywalska", url:"https://www.parp.gov.pl/component/publications/author/karolina-dorywalska", name:"Karolina Dorywalska", role:"Dyrektor Departamentu Komunikacji i Marketingu", company:"PARP",
+  bio:"Menedżerka z wieloletnim stażem w zarządzaniu zespołami i projektami. Od 2016 kieruje działami komunikacji w PARP, nadzorując promocję i edukację przy wdrażaniu narzędzi wsparcia dla przedsiębiorców. Odpowiada za politykę wizerunkową instytucji, zaangażowana w polski udział w EXPO.",
+  offers:["komunikacja PARP","obecność w kanałach PARP","projekty EXPO"],
+  tags:["parp","pr","komunikacja"],
+  session:"Wprowadzenie", when:"24.08 13:10" },
+
+{ id:"karol-demski", url:"https://www.parp.gov.pl/component/publications/author/karol-demski", name:"Karol Demski", role:"Zastępca dyrektora Departamentu Komunikacji i Marketingu", company:"PARP",
+  bio:"Menedżer z wieloletnim doświadczeniem w zarządzaniu zespołami i projektami komunikacji i marketingu instytucjonalnego. Odpowiada za politykę komunikacyjną i wizerunek instytucji oraz nadzór nad działaniami promocyjnymi dotyczącymi instrumentów wsparcia finansowanych ze środków krajowych i europejskich.",
+  offers:["komunikacja PARP","promocja instrumentów wsparcia"],
+  tags:["parp","pr","komunikacja"],
+  session:"Organizacja wydarzenia", when:"24-25.08" },
+
+{ id:"hubert-adamczyk", url:"https://www.parp.gov.pl/component/publications/author/adamczyk-hubert", name:"Hubert Adamczyk", role:"Ekspert PARP, trener wystąpień publicznych", company:"PARP",
+  bio:"Ekspert komunikacji i mediów, trener wystąpień publicznych, edukator, host i speaker. Specjalizuje się w komunikowaniu innowacji i pomaganiu liderom przekształcać złożone koncepcje w angażujące narracje biznesowe. Twórca i gospodarz podcastu PARP.talks, wykładowca akademicki, członek PTKS. W PARP wspiera obszar transformacji cyfrowej.",
+  offers:["narracja biznesowa","komunikowanie innowacji","wystąpienia publiczne","podcast PARP.talks","transformacja cyfrowa"],
+  tags:["parp","szkolenie","komunikacja","media"],
+  session:"Moderator fireside o influencer marketingu", when:"24.08 18:10" },
+
+];
