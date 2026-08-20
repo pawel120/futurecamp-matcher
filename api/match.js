@@ -70,13 +70,13 @@ const GEMINI_SCHEMA = {
   },
 };
 
-async function callGemini(key, model, q) {
+async function callGemini(key, model, q, exclude) {
   return fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-goog-api-key': key },
     body: JSON.stringify({
       system_instruction: { parts: [{ text: SYSTEM }] },
-      contents: [{ role: 'user', parts: [{ text: `Użytkownik szuka: ${q}` }] }],
+      contents: [{ role: 'user', parts: [{ text: userMsg(q, exclude) }] }],
       generationConfig: {
         temperature: 0.4,
         maxOutputTokens: 2500,
@@ -100,7 +100,7 @@ async function listGeminiModels(key) {
 }
 
 /* ---------------------- CLAUDE (zapas) ---------------------- */
-async function callClaude(key, model, q) {
+async function callClaude(key, model, q, exclude) {
   return fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
@@ -109,11 +109,16 @@ async function callClaude(key, model, q) {
       max_tokens: 2500,
       system: [{ type: 'text', text: SYSTEM, cache_control: { type: 'ephemeral' } }],
       messages: [
-        { role: 'user', content: `Użytkownik szuka: ${q}\n\nOdpowiedz samą tablicą JSON: [{"id":"...","fit":"get|give|both","why":"...","ask":"..."}]` },
+        { role: 'user', content: `${userMsg(q, exclude)}\n\nOdpowiedz samą tablicą JSON: [{"id":"...","fit":"get|give|both","why":"...","ask":"..."}]` },
         { role: 'assistant', content: '[' },
       ],
     }),
   });
+}
+
+function userMsg(q, exclude) {
+  if (!exclude || !exclude.length) return `Użytkownik szuka: ${q}`;
+  return `Użytkownik szuka: ${q}\n\nTe osoby już pokazano, pomiń je i znajdź KOLEJNE najlepsze dopasowania (mogą być trochę słabsze niż poprzednie, ale nadal sensowne): ${exclude.join(', ')}`;
 }
 
 /* Kaskada modeli. Google wycofuje starsze wersje (404) i przeciąża nowsze (503),
@@ -129,7 +134,7 @@ const CLAUDE_CHAIN = ['claude-haiku-4-5', 'claude-sonnet-4-5'];
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 let cachedModel = null;          // co ostatnio zadziałało — próbujemy tego najpierw
 
-async function callWithFallback(provider, key, q) {
+async function callWithFallback(provider, key, q, exclude) {
   const deadline = Date.now() + BUDGET_MS;
   const call = provider === 'gemini' ? callGemini : callClaude;
   const base = provider === 'gemini' ? GEMINI_CHAIN : CLAUDE_CHAIN;
@@ -144,7 +149,7 @@ async function callWithFallback(provider, key, q) {
     for (let attempt = 0; attempt < 2; attempt++) {
       if (Date.now() > deadline) break;
       let r;
-      try { r = await call(key, model, q); }
+      try { r = await call(key, model, q, exclude); }
       catch (e) { tried.push(`${model}: ${e.message}`); break; }
 
       if (r.ok) { cachedModel = model; return { r, model, tried }; }
@@ -196,10 +201,13 @@ module.exports = async function handler(req, res) {
 
   const q = String((req.body && req.body.q) || '').trim().slice(0, MAX_Q);
   if (q.length < 3) return res.status(400).json({ error: 'Napisz, czego szukasz.' });
+  const exclude = Array.isArray(req.body && req.body.exclude)
+    ? req.body.exclude.filter(id => typeof id === 'string').slice(0, 100)
+    : [];
 
   try {
     const key = provider === 'gemini' ? gKey : cKey;
-    const { r, model, fatal, exhausted, tried } = await callWithFallback(provider, key, q);
+    const { r, model, fatal, exhausted, tried } = await callWithFallback(provider, key, q, exclude);
     console.error('próby:', tried.join(' | '));
 
     if (fatal) {
