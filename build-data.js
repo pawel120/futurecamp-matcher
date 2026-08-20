@@ -21,15 +21,13 @@ const line = (p, kind) => {
   return out;
 };
 
+// uczestnicy (profiles.js) tymczasowo wyłączeni z tego deployu — patrz git history po przywrócenie
 const people = [
-  ...window.PROFILES.filter(p => !p.hidden).map(p => ({ ...p, kind: 'uczestnik' })),
   ...window.SPEAKERS.map(p => ({ ...p, kind: 'prelegent' })),
 ];
 
 const catalog =
-  '### UCZESTNICY (jadą jako founderzy/goście)\n' +
-  people.filter(p => p.kind === 'uczestnik').map(p => line(p)).join('\n') +
-  '\n\n### PRELEGENCI, MENTORZY I JURY (dostępni przez całe wydarzenie)\n' +
+  '### PRELEGENCI, MENTORZY I JURY (dostępni przez całe wydarzenie)\n' +
   people.filter(p => p.kind === 'prelegent').map(p => line(p)).join('\n');
 
 const dir = Object.fromEntries(people.map(p => [p.id, {

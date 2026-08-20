@@ -170,7 +170,7 @@ $('chips').innerHTML = CHIPS.map(c => `<button class="chip" data-q="branża ${es
 
 let busy = false;
 
-const STEPS = ['Czytam Twoje zapytanie…','Przeglądam 113 osób…','Szukam komplementarnych dopasowań…','Układam uzasadnienia…'];
+const STEPS = ['Czytam Twoje zapytanie…','Przeglądam prelegentów i jury…','Szukam komplementarnych dopasowań…','Układam uzasadnienia…'];
 function loading(){
   $('out').innerHTML = `<div class="load"><div class="dots"><i></i><i></i><i></i></div><div id="st">${STEPS[0]}</div></div>`;
   let i = 0;
