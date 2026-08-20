@@ -68,9 +68,12 @@
 
   .why{margin-top:11px; font-size:15px}
   .ask{margin-top:11px; font-size:14.5px; background:var(--bg); border-left:3px solid var(--accent);
-    border-radius:0 8px 8px 0; padding:10px 12px}
-  .ask b{display:block; font-size:11px; letter-spacing:.06em; text-transform:uppercase;
-    color:var(--muted); margin-bottom:2px}
+    border-radius:0 8px 8px 0}
+  .ask-toggle{display:block; width:100%; text-align:left; font:inherit; padding:10px 12px;
+    background:none; border:0; cursor:pointer}
+  .ask-toggle b{display:block; font-size:11px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--muted); font-weight:700}
+  .ask-body{padding:0 12px 10px}
   .when{margin-top:10px; font-size:13px; color:var(--muted)}
 
   .acts{display:flex; gap:8px; margin-top:14px; flex-wrap:wrap}
@@ -203,7 +206,7 @@ function card(p, i){
       <span class="kind">${p.kind === 'prelegent' ? 'prelegent / jury' : 'uczestnik'}</span>
     </div>
     <div class="why">${esc(p.why)}</div>
-    ${p.ask ? `<div class="ask"><b>Zapytaj o</b>${esc(p.ask)}</div>` : ''}
+    ${p.ask ? `<div class="ask"><button class="ask-toggle" type="button"><b>Zapytaj o</b></button><div class="ask-body hide">${esc(p.ask)}</div></div>` : ''}
     ${p.session ? `<div class="when">${esc(p.session)}${p.when ? ' · ' + esc(p.when) : ''}</div>` : ''}
     <div class="acts">
       ${link ? `<a class="btn primary" href="${esc(link)}" target="_blank" rel="noopener">${p.linkedin ? 'LinkedIn →' : p.kind === 'prelegent' ? 'Profil PARP →' : 'Strona →'}</a>` : ''}
@@ -301,6 +304,8 @@ document.addEventListener('click', e => {
   });
   const m = e.target.closest('#moreBtn');
   if(m) search(true);
+  const askT = e.target.closest('.ask-toggle');
+  if(askT) askT.nextElementSibling.classList.toggle('hide');
 });
 </script>
 </body>

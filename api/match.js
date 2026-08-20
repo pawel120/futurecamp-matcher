@@ -201,6 +201,7 @@ module.exports = async function handler(req, res) {
 
   const q = String((req.body && req.body.q) || '').trim().slice(0, MAX_Q);
   if (q.length < 3) return res.status(400).json({ error: 'Napisz, czego szukasz.' });
+  console.log('zapytanie:', q);
   const exclude = Array.isArray(req.body && req.body.exclude)
     ? req.body.exclude.filter(id => typeof id === 'string').slice(0, 100)
     : [];
