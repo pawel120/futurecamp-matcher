@@ -40,6 +40,7 @@
   .chip:hover{border-color:var(--accent); color:var(--accent)}
 
   .note{font-size:13px; color:var(--muted); padding:14px 2px 4px}
+  .cat-label{font-size:13px; color:var(--muted); padding:12px 2px 0}
 
   .load{text-align:center; padding:52px 16px; color:var(--muted)}
   .dots{display:inline-flex; gap:5px; margin-bottom:14px}
@@ -125,6 +126,7 @@
             maxlength="500" enterkeyhint="search"></textarea>
   <button class="go" id="go">Szukaj</button>
 
+  <div class="cat-label">Albo szukaj po kategorii biznesu:</div>
   <div class="chips" id="chips"></div>
   <div class="note" id="note"></div>
 
@@ -177,9 +179,12 @@ function sub(p){
 const DIR = { get:'↓ Pomoże Tobie', give:'↑ Ty pomożesz jemu', both:'↔ Wspólny temat' };
 
 const CHIPS = [
-
+  'AI', 'B2B', 'B2C', 'Marketing', 'Sprzedaż', 'Hardware', 'SaaS',
+  'Deep Tech', 'EdTech', 'HR Tech', 'HealthTech', 'FinTech', 'PropTech',
+  'FemTech', 'E-commerce', 'Cybersecurity', 'Logistyka', 'FoodTech',
+  'Mobile', 'Finansowanie i inwestycje',
 ];
-$('chips').innerHTML = CHIPS.map(c => `<button class="chip">${esc(c)}</button>`).join('');
+$('chips').innerHTML = CHIPS.map(c => `<button class="chip" data-q="branża ${esc(c)}">${esc(c)}</button>`).join('');
 
 let busy = false;
 
@@ -206,11 +211,11 @@ function card(p, i){
       <span class="kind">${p.kind === 'prelegent' ? 'prelegent / jury' : 'uczestnik'}</span>
     </div>
     <div class="why">${esc(p.why)}</div>
-    ${p.ask ? `<div class="ask"><button class="ask-toggle" type="button"><b>Zapytaj o</b></button><div class="ask-body hide">${esc(p.ask)}</div></div>` : ''}
+    ${p.ask ? `<div class="ask"><button class="ask-toggle" type="button"><b>Przykładowe pytanie AI</b></button><div class="ask-body hide">${esc(p.ask)}</div></div>` : ''}
+    ${p.raw ? `<div class="ask"><button class="ask-toggle" type="button"><b>Pełny tekst z WhatsAppa</b></button><div class="ask-body hide">${esc(p.raw)}</div></div>` : ''}
     ${p.session ? `<div class="when">${esc(p.session)}${p.when ? ' · ' + esc(p.when) : ''}</div>` : ''}
     <div class="acts">
       ${link ? `<a class="btn primary" href="${esc(link)}" target="_blank" rel="noopener">${p.linkedin ? 'LinkedIn →' : p.kind === 'prelegent' ? 'Profil PARP →' : 'Strona →'}</a>` : ''}
-      <button class="btn" data-copy="${esc(p.ask || p.why)}">Kopiuj pytanie</button>
     </div>
   </div>`;
 }
@@ -296,12 +301,7 @@ $('q').addEventListener('keydown', e => {
 });
 document.addEventListener('click', e => {
   const chip = e.target.closest('.chip');
-  if(chip){ $('q').value = chip.textContent; search(false); return; }
-  const c = e.target.closest('[data-copy]');
-  if(c) navigator.clipboard.writeText(c.dataset.copy).then(() => {
-    const o = c.textContent; c.textContent = 'Skopiowane ✓';
-    setTimeout(() => c.textContent = o, 1500);
-  });
+  if(chip){ $('q').value = chip.dataset.q || chip.textContent; search(false); return; }
   const m = e.target.closest('#moreBtn');
   if(m) search(true);
   const askT = e.target.closest('.ask-toggle');
