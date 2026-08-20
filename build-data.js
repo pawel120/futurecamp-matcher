@@ -37,7 +37,7 @@ const dir = Object.fromEntries(people.map(p => [p.id, {
   headline: p.headline || p.role || '',
   linkedin: p.linkedin || '', url: p.url || '',
   session: p.session || '', when: p.when || '', kind: p.kind,
-  raw: p.raw || '',
+  raw: p.raw || '', desc: (p.does || p.bio || '').replace(/\s+/g, ' ').trim(),
 }]));
 
 fs.writeFileSync('api/data.js',
